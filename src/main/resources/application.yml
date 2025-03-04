@@ -1,0 +1,6 @@
+spring:
+  elasticsearch:
+    uris: http://localhost:9200  # 确保ES服务已启动
+      # 若启用安全认证（企业版需配置）：
+    # username: elastic
+    # password: your-password
