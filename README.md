@@ -14,14 +14,21 @@ D:\Software\ElasticSearch\kibana-7.17.3-windows-x86_64
 *** 注意：Kibana版本要和Elasticsearch版本一致。***
 
 
-# Elasticsearch 基本数据结构
-    字段 (Field): 类似于关系型数据库中的字段，是数据的最小单位。
+# Elasticsearch 7.17.3 基本数据结构
+    索引 (Index): 索引是 Elasticsearch 中存储数据的逻辑容器，类似于关系型数据库中的“表”。
+特点：
+   一个索引可以包含多个文档。
+    索引名称必须是小写字母，不能包含特殊字符。
 
-    文档 (Document): 由多个字段组成，类似于关系型数据库中的一行数据。
+ 示例：my_index 是一个索引。
+
+    文档 (Document): 文档是 Elasticsearch 中的基本数据单元，以 JSON 格式存储。类似于关系型数据库中的一行数据。
+
+    字段 (Field): 类似于关系型数据库中的字段，是数据的最小单位。
 
     类型 (Type): 由多个文档组成，类似于关系型数据库中的表。在 Elasticsearch 7.x 版本中，一个索引下只能有一个类型。
 
-    索引 (Index): 由多个类型组成，类似于关系型数据库中的数据库。
+    
 
     集群 (Cluster): 由多个索引组成，通常由一个或多个节点组成。
 
