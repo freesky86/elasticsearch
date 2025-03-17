@@ -10,6 +10,7 @@ D:\Software\ElasticSearch\
 # 4.POSTMAN通过RESTful接口创建index(PUT)，添加document(POST)，查询document(GET)，删除index(DELETE)
 # 5.启动 kibana(注意要和elasticsearch版本一致)，浏览器访问 http://localhost:5601 ，搜索 Dev Tools，可查询index里面的document
 命令行到kibana zip解压目录的 \bin 目录下， 输入 kibana   
+*** 注意：Kibana版本要和Elasticsearch版本一致。***
 
 
 # Elasticsearch 基本数据结构
