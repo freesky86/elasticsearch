@@ -1,0 +1,56 @@
+D:\Software\ElasticSearch\elasticsearch-8.17.3
+D:\Software\ElasticSearch\kibana-8.17.3
+1.ElasticSearch和kibana的版本要匹配
+2.启动elasticsearch-8.17.3，
+默认会启动xpack功能，增加了SSL的安全性。
+在浏览器通过https协议访问(7.xx.xx版本是http) https://localhost:9200/
+在CMD启动窗口会看到类似下面的信息。
+其中访问https://localhost:9200/要输入用户名和密码
+user: elastic
+password: s2DwngNm_D0JH_cXRxCY
+
+------------------------------------------------------------------------------------------------------------------------
+-> Elasticsearch security features have been automatically configured!
+-> Authentication is enabled and cluster connections are encrypted.
+
+->  Password for the elastic user (reset with `bin/elasticsearch-reset-password -u elastic`):
+  s2DwngNm_D0JH_cXRxCY
+
+->  HTTP CA certificate SHA-256 fingerprint:
+  0cf45ccb1d8a8308909f658c835571bb67dab4ab21ef365f82e3fc9d7cc1a38a
+
+->  Configure Kibana to use this cluster:
+* Run Kibana and click the configuration link in the terminal when Kibana starts.
+* Copy the following enrollment token and paste it into Kibana in your browser (valid for the next 30 minutes):
+  eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMTcyLjE3LjMyLjE6OTIwMCJdLCJmZ3IiOiIwY2Y0NWNjYjFkOGE4MzA4OTA5ZjY1OGM4MzU1NzFiYjY3ZGFiNGFiMjFlZjM2NWY4MmUzZmM5ZDdjYzFhMzhhIiwia2V5IjoiLVQ3RXhaVUJyN3dRc0dHMUxlNWM6b2pFdzJ5Y0hULXFpUDZ1clZfV0ZtZyJ9
+
+->  Configure other nodes to join this cluster:
+* On this node:
+  - Create an enrollment token with `bin/elasticsearch-create-enrollment-token -s node`.
+  - Uncomment the transport.host setting at the end of config/elasticsearch.yml.
+  - Restart Elasticsearch.
+* On other nodes:
+  - Start Elasticsearch with `bin/elasticsearch --enrollment-token <token>`, using the enrollment token that you generated.
+------------------------------------------------------------------------------------------------------------------------
+
+3.启动kibana
+浏览器访问 http://localhost:5601/
+在首页把ElasticSearch启动窗口中的 enrollment token copy进去
+eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMTcyLjE3LjMyLjE6OTIwMCJdLCJmZ3IiOiIwY2Y0NWNjYjFkOGE4MzA4OTA5ZjY1OGM4MzU1NzFiYjY3ZGFiNGFiMjFlZjM2NWY4MmUzZmM5ZDdjYzFhMzhhIiwia2V5IjoiLVQ3RXhaVUJyN3dRc0dHMUxlNWM6b2pFdzJ5Y0hULXFpUDZ1clZfV0ZtZyJ9
+然后输入用户名密码登录
+user: elastic
+password: s2DwngNm_D0JH_cXRxCY
+在kibana启动窗口会收到验证码，输入到页面
+
+
+i Kibana has not been configured.
+
+Go to http://localhost:5601/?code=082265 to get started.
+
+
+
+
+Your verification code is:  082 265
+
+这样就可以看到kibana的主界面了。
+
